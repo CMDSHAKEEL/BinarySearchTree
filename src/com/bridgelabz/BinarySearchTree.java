@@ -21,6 +21,11 @@ public class BinarySearchTree {
         root = null;
     }
 
+    //Counting Nodes by using left and right variables
+    int leftNodeCount = 0;
+    int rightNodeCount = 0;
+
+
     //putData() will add new node to the binary search tree
     public void putData(int x){
         Node node = new Node(x);
@@ -65,6 +70,11 @@ public class BinarySearchTree {
         }
     }
 
+    public void size(){
+        System.out.println("Size of this Binary Search Tree : "+ (leftNodeCount+rightNodeCount+1));
+    }
+
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
 
@@ -80,6 +90,8 @@ public class BinarySearchTree {
         System.out.println("Root Left -> node : "+tree.root.left.key);
         System.out.println("Root Right -> node : "+tree.root.right.key);
 
+        //Displays Size of the binary tree
+        tree.size();
 
 
     }
